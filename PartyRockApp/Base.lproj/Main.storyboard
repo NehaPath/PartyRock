@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="still time.ttf">
+            <string>StillTime-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,151 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="uqh-bc-usd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="Lmo-U6-sqa"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3T-Mu-BII">
+                                <rect key="frame" x="0.0" y="190" width="375" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3ou-D6-DhL">
+                                        <rect key="frame" x="8" y="3" width="359" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdn-fO-TnQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="1" green="0.19597543111081472" blue="0.88770739992959524" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebL-YX-NX7">
+                                                <rect key="frame" x="119.5" y="0.0" width="120" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Songs">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghy-5g-Mex">
+                                                <rect key="frame" x="239.5" y="0.0" width="119.5" height="36"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EGd-ae-Rcg"/>
+                                    <constraint firstItem="3ou-D6-DhL" firstAttribute="top" secondItem="R3T-Mu-BII" secondAttribute="top" constant="3" id="Msp-2f-b5q"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ou-D6-DhL" secondAttribute="trailing" constant="8" id="YDS-7v-d0R"/>
+                                    <constraint firstItem="3ou-D6-DhL" firstAttribute="leading" secondItem="R3T-Mu-BII" secondAttribute="leading" constant="8" id="zRc-l5-RdO"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Igw-xJ-0eW">
+                                <rect key="frame" x="0.0" y="234" width="375" height="433"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="QOx-OQ-dB4" customClass="PartyCell" customModule="PartyRockApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QOx-OQ-dB4" id="IEc-mj-NTr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="8bn-l4-BfP">
+                                                    <rect key="frame" x="8" y="7.5" width="68" height="68"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="68" id="R4g-gR-Tdx"/>
+                                                        <constraint firstAttribute="height" constant="68" id="rtZ-Xu-fCa"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where the sun goes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVx-kH-39r">
+                                                    <rect key="frame" x="84" y="18.5" width="283" height="47"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="47" id="GVs-YN-sOe"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="32"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8bn-l4-BfP" firstAttribute="centerY" secondItem="IEc-mj-NTr" secondAttribute="centerY" id="8cx-xr-jpP"/>
+                                                <constraint firstItem="8bn-l4-BfP" firstAttribute="leading" secondItem="IEc-mj-NTr" secondAttribute="leadingMargin" id="KWk-Vc-T0d"/>
+                                                <constraint firstItem="RVx-kH-39r" firstAttribute="leading" secondItem="8bn-l4-BfP" secondAttribute="trailing" constant="8" id="h4X-JG-j7d"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RVx-kH-39r" secondAttribute="trailing" id="lHI-33-5wc"/>
+                                                <constraint firstItem="RVx-kH-39r" firstAttribute="centerY" secondItem="IEc-mj-NTr" secondAttribute="centerY" id="uv0-20-bsx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="videoPreviewImage" destination="8bn-l4-BfP" id="m2X-fv-QIP"/>
+                                            <outlet property="videoTitle" destination="RVx-kH-39r" id="wGE-P1-XXk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Igw-xJ-0eW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1pk-Kf-8Li"/>
+                            <constraint firstItem="uqh-bc-usd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2y8-vC-ad9"/>
+                            <constraint firstAttribute="trailing" secondItem="uqh-bc-usd" secondAttribute="trailing" id="3YV-9w-Hz8"/>
+                            <constraint firstAttribute="trailing" secondItem="Igw-xJ-0eW" secondAttribute="trailing" id="5UI-Lm-KAh"/>
+                            <constraint firstItem="R3T-Mu-BII" firstAttribute="top" secondItem="uqh-bc-usd" secondAttribute="bottom" id="AzQ-mP-a3Y"/>
+                            <constraint firstItem="R3T-Mu-BII" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="big-8C-w6V"/>
+                            <constraint firstAttribute="trailing" secondItem="R3T-Mu-BII" secondAttribute="trailing" id="cNZ-nb-ljm"/>
+                            <constraint firstItem="Igw-xJ-0eW" firstAttribute="top" secondItem="R3T-Mu-BII" secondAttribute="bottom" id="lkk-x5-Iup"/>
+                            <constraint firstItem="uqh-bc-usd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="t6O-nR-pSX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Igw-xJ-0eW" secondAttribute="bottom" id="tAQ-3T-7Qd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="bka-ey-sjJ" kind="showDetail" identifier="VideoVC" id="gL4-wr-iCJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--VideoVC-->
+        <scene sceneID="AUn-F7-ucC">
+            <objects>
+                <viewController id="bka-ey-sjJ" customClass="VideoVC" customModule="PartyRockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rHO-Mt-aN2"/>
+                        <viewControllerLayoutGuide type="bottom" id="7er-K5-WWM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cg8-fe-bsN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-Of-fNh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="219" id="X1a-Lk-hU3"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Nfk-Of-fNh" secondAttribute="trailing" id="9Xf-eX-I8d"/>
+                            <constraint firstItem="Nfk-Of-fNh" firstAttribute="leading" secondItem="cg8-fe-bsN" secondAttribute="leading" id="DFB-1i-xl2"/>
+                            <constraint firstItem="Nfk-Of-fNh" firstAttribute="top" secondItem="cg8-fe-bsN" secondAttribute="top" id="NQ7-Fd-lLS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9en-gh-hrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688.79999999999995" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="partybanner" width="610" height="297"/>
+    </resources>
 </document>
