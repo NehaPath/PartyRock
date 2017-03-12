@@ -157,14 +157,30 @@
                                     <constraint firstAttribute="height" constant="219" id="X1a-Lk-hU3"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1XS-CC-6p7">
+                                <rect key="frame" x="21" y="269" width="333" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="q8k-1s-2YL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Nfk-Of-fNh" secondAttribute="trailing" id="9Xf-eX-I8d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1XS-CC-6p7" secondAttribute="trailing" constant="5" id="9f6-wW-t5J"/>
                             <constraint firstItem="Nfk-Of-fNh" firstAttribute="leading" secondItem="cg8-fe-bsN" secondAttribute="leading" id="DFB-1i-xl2"/>
+                            <constraint firstItem="1XS-CC-6p7" firstAttribute="top" secondItem="Nfk-Of-fNh" secondAttribute="bottom" constant="50" id="DvE-74-aW0"/>
                             <constraint firstItem="Nfk-Of-fNh" firstAttribute="top" secondItem="cg8-fe-bsN" secondAttribute="top" id="NQ7-Fd-lLS"/>
+                            <constraint firstItem="1XS-CC-6p7" firstAttribute="leading" secondItem="cg8-fe-bsN" secondAttribute="leadingMargin" constant="5" id="vuz-9r-w12"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="titleLbl" destination="1XS-CC-6p7" id="4Ns-Yv-Wdx"/>
+                        <outlet property="webView" destination="Nfk-Of-fNh" id="zgc-t4-L18"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9en-gh-hrh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
